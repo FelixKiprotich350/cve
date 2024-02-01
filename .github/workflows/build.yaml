@@ -1,4 +1,4 @@
-name: macapp build
+name: ubuntu build
 
 on:
   push:

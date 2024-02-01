@@ -45,5 +45,11 @@
         "deb"
       ]
     }
+  },
+  "publish": {
+    "provider": "github",
+    "owner": "FelixKiprotich350",
+    "repo": "cve",
+    "releaseType": "draft"
   }
 }

@@ -1,0 +1,23 @@
+directories:
+  output: dist
+  buildResources: build
+productName: YourApp
+appId: com.yourcompany.yourapp
+files:
+  - filter:
+      - dist/**/*
+      - node_modules/**/*
+extraFiles:
+  - from: src/assets
+    to: assets
+    filter:
+      - '**/*'
+win:
+  target: nsis
+mac:
+  target: dmg
+linux:
+  target:
+    - AppImage
+    - deb
+electronVersion: 28.2.1

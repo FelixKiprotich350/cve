@@ -5,6 +5,7 @@ productName: YourApp
 appId: com.yourcompany.yourapp
 files:
   - filter:
+      - src/**/*
       - dist/**/*
       - node_modules/**/*
 extraFiles:

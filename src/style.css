@@ -1,0 +1,77 @@
+* {
+  -webkit-user-select:none;
+  user-select: none;
+}
+
+body {
+  /* background-image: url('images/htmlbg.png'); */
+  background-color: #908d96;
+}
+.inputsearch {
+  outline: none !important;
+  border:2px solid red;
+  /* box-shadow: 0 0 8px #719ECE; */
+  /* border-radius:4px;  */ 
+  padding: 4px;
+  font-size: large;  
+  width: 100%; 
+  text-align: center;
+}
+ 
+
+.column { 
+  box-sizing: border-box;
+}
+
+.first-column, .last-column {
+  width: 100px;
+  background-color: transparent;
+}
+
+.middle-column {
+  flex: 1;
+  background-color: #eee;
+}
+
+.rounded-div {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+  background-color: #46424f;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+.row strong {
+  display: inline-block;
+  width: 80px; /* Adjust as needed */
+  margin-left: 16px;
+}
+
+.sticky-div {
+  background-color: #f1f1f1;
+  border-radius: 0px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  text-align: center;
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; 
+
+}
+
+.url-link{
+  color: orange; 
+}
+.url-link:hover{
+  color: blue; 
+}

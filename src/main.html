@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CVE Search Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="./js/jquery-1.7.2.js"></script>
+    <script src="./renderer.js"></script>
+
+</head>
+
+<body style="margin: 0px;">
+    <div class="container-fluid" style="height: 100%; margin: 4px; padding-left : 0px; margin-right: 0px;">
+
+
+        <div class="row col-sm-12" style="padding:0px;  height: 100%; margin-right: 8px;margin-left: 8px; margin-bottom: 0px;  position: -webkit-sticky; position: sticky; top: 0px; ">
+            <div class="well sticky-div" style="height: 32px;  display: flex; margin-bottom: 4px; margin-right: 0px; ">
+                <div class="column first-column">
+                    <button id="updateButton"
+                        style="border-radius: 4px; padding: 4px; font-size: medium; border-color: grey;">update</button>
+                </div>
+                <div class="column middle-column">
+                    <input id="input_searchbox" placeholder="Search item by CVE keywords" class="inputsearch">
+                </div>
+                <div class="column last-column">
+                    <button id="searchButton"
+                        style="border-radius: 4px; padding: 4px; font-size: medium; border-color: grey;">Search</button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row col-sm-12" style="padding-top:0px;  height: 100%; margin-right: 8px; margin-top: 0px; padding-right: 12px; ">
+            <div class="container-fluid" style="margin-top: 4px;" id="contentdiv">
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<!-- <script src="./renderme.js"></script> -->
+
+</html>

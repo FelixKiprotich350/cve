@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <title>SearchTool Parameter Settings</title>
+   <script defer src="./Settingspage.js"></script> 
+  <link href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+  <style>
+    * {
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 224, 224);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Add padding to containers */
+    .container {
+      padding: 8px;
+    }
+
+    /* Full-width input fields */
+    input[type=text],
+    input[type=number] {
+      width: 100%;
+      padding: 16px;
+      margin: 4px 0 4px 0;
+      display: inline-block;
+      border: 1px solid;
+      border-color: rgb(223, 218, 218);
+      color: black;
+      background: white;
+    }
+
+    input[type=text]:focus {
+      background-color: rgb(245, 227, 227);
+
+    }
+
+    /* Overwrite default styles of hr */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* Set a style for the submit button */
+    .btnsave {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      opacity: 0.9;
+      width: 100px;
+    }
+
+
+    .myrow {
+      display: flex;
+      margin-top: 2px;
+    }
+
+    /* Create two equal columns that sits next to each other */
+    .halfcolumn {
+      flex: 50%;
+      padding: 4px;
+      /* Should be removed. Only for demonstration */
+    }
+  </style>
+</head>
+
+<body style="padding: 8px;">
+  <div >
+
+    <div class="row" style="margin-left: 8px;">
+
+      <label><b>Github Username</b></label>
+      <input type="text" id="git_username">
+      <label><b>Github Repository Name</b></label>
+      <input type="text" id="git_reponame">
+      <label><b>Database File Path (Excluding Main Repo Folder)</b></label>
+      <input type="text" id="git_dbfilepath">
+
+    </div>
+    <div class="row" style="padding-left: 20px;">
+      <div class="myrow" style="align-items: center;align-content: center;text-align: center;">
+        <div class="halfcolumn">
+          <button class="btn-close" id="btnclose">Close</button>
+        </div>
+        <div class="halfcolumn">
+          <button id="btnsave">Save Settings</button>
+        </div>
+       
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>

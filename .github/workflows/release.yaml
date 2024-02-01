@@ -52,5 +52,4 @@ jobs:
           asset_name: My-Downloadable-Folder-v1.0.0.zip
           asset_content_type: application/zip
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

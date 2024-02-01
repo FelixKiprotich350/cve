@@ -1,0 +1,34 @@
+name: macapp build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.17.1
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Set up Environment Variables
+      run: echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV
+
+    - name: Configure Git
+      run: |
+          git config --global user.email "fkiprotich845@gmail.com"
+          git config --global user.name "Felix Kiprotich"
+ 
+    - name: Build Application
+      run: |
+        npx electron-builder --linux 

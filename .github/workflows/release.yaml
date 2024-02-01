@@ -22,9 +22,7 @@ jobs:
         run: npm install
 
       - name: Install Dependencies
-        run: |
-              npm install sqlite3@5.0.0 
-              npm install libsqlite3-dev
+        run: npm install sqlite3@5.0.0  
 
       - name: Set up Environment Variables
         run: echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV

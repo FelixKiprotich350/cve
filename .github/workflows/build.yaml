@@ -28,7 +28,12 @@ jobs:
       run: |
           git config --global user.email "fkiprotich845@gmail.com"
           git config --global user.name "Felix Kiprotich"
- 
+
+    - name: Print GitHub Token
+      run: |
+          echo "GitHub Token: ${{ secrets.GITHUB_TOKEN }}"
+          echo "GH_Token: ${{ secrets.GH_TOKEN }}"
+
     - name: Build Application 
       run: |
         npx electron-builder --linux 

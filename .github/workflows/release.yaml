@@ -36,9 +36,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: release-folder.zip
-          tag_name: v1.0.0
-          title: Release v1.0.0
-          body: Release notes for v1.0.0
+          tag_name: ${{ github.ref }} 
+          body: "Release notes for ${{ github.ref }}"
           draft: false
           prerelease: false
         env:

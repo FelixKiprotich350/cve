@@ -1,10 +1,8 @@
 const { ipcRenderer, electron, ipcMain } = require('electron')
 const axios = require('axios');
 const fs = require('fs');
-const path = require('path');
-const sqlite3 = require('sqlite3').verbose(); 
-
-
+const path = require('path'); 
+const { sqlite3 } = require('sqlite3');
 
 // Replace these values with your GitHub repository information
 var owner = 'test';
@@ -109,7 +107,7 @@ async function LoadDbData() {
       throw err;
    }
 }
-
+ 
 function displayItemList(itemList) {
    const contentDiv = document.getElementById('contentdiv');
    contentDiv.innerHTML = "";

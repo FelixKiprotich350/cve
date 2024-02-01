@@ -29,9 +29,8 @@ jobs:
           git config --global user.email "fkiprotich845@gmail.com"
           git config --global user.name "Felix Kiprotich"
  
-    - name: Build Application
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+    - name: Build Application 
       run: |
         npx electron-builder --linux 
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

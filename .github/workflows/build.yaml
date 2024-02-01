@@ -30,5 +30,8 @@ jobs:
           git config --global user.name "Felix Kiprotich"
  
     - name: Build Application
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
         npx electron-builder --linux 

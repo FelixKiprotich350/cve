@@ -8,11 +8,6 @@ files:
       - src/**/*
       - dist/**/*
       - node_modules/**/*
-extraFiles:
-  - from: src/assets
-    to: assets
-    filter:
-      - '**/*'
 win:
   target: nsis
 mac:

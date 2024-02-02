@@ -18,11 +18,23 @@ jobs:
         with:
           node-version: 18.17.1
 
+       # Add steps here to update your Linux environment
+      - name: Update Linux Environment
+        run: |
+          # Add your update commands here
+          sudo apt-get update
+          sudo apt-get upgrade -y 
+          sudo apt-get install build-essential
+          sudo apt-get install libsqlite3-dev
+
       - name: Install Dependencies
         run: npm install
 
-      - name: Install Dependencies
+      - name: Install sqlite3
         run: npm install sqlite3@5.0.0  
+        
+      - name: Install node-gyp
+        run: npm install -g node-gyp 
 
       - name: Set up Environment Variables
         run: echo "GH_TOKEN=${{ secrets.GH_TOKEN }}" >> $GITHUB_ENV

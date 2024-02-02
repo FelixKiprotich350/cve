@@ -2,8 +2,8 @@ name: Release Electron App
 
 on:
   push:
-    tags:
-      - '*'
+    branches:
+      main
 
 jobs:
   release:
@@ -29,16 +29,11 @@ jobs:
 
       - name: Build Electron App
         run: npx electron-builder --linux 
-
-      - name: Zip the folder
-        run: |
-          zip -r release-folder.zip ./dist
-        working-directory: ${{ github.workspace }}
-
+ 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: release-folder.zip
+          files: dist/
           tag_name: ${{ github.ref }} 
           body: "Release notes for ${{ github.ref }}"
           draft: false
